@@ -69,7 +69,7 @@ async def onboarding_stage(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ['America/Denver', 'America/Los_Angeles'],
         ['Europe/London', 'Europe/Paris'],
         ['Asia/Tokyo', 'Asia/Singapore'],
-        ['UTC (I'll set it later)']
+        ["UTC (I'll set it later)"]
     ]
 
     await update.message.reply_text(
