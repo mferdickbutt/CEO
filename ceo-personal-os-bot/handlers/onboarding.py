@@ -146,7 +146,7 @@ async def onboarding_reminder_time(update: Update, context: ContextTypes.DEFAULT
         "• /daily - Start your first daily check-in (5 min)\n"
         "• /interviews - Complete the Identity & Values interview (30 min)\n"
         "• /goals - Set your 1-year goals\n"
-        "• /frameworks - Learn about the frameworks\n\n"
+        "• /frameworks - Explore Annual Review, Vivid Vision, and other supporting frameworks with prompts\n\n"
         "I recommend starting with /daily to get a feel for the system.",
         parse_mode='Markdown'
     )
