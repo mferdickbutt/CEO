@@ -60,8 +60,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         await update.message.reply_text(
             "👋 Welcome to your CEO Personal Operating System.\n\n"
-            "This is a private, single-user productivity system designed for founders, "
-            "CEOs, and operators who want clarity without complexity.\n\n"
+            "This bot is a private operating rhythm coach. It keeps you on a daily/weekly "
+            "cadence, captures decisions and patterns, and pulls from proven frameworks "
+            "so you can think clearly without more tools. Everything stays with you.\n\n"
             "I'll help you with:\n"
             "• Daily check-ins (5 min)\n"
             "• Weekly reviews (20 min)\n"
@@ -69,8 +70,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "• Annual reflection and planning\n"
             "• Goal tracking and life design\n"
             "• Pattern recognition\n\n"
-            "Let's start with a quick setup. This will take about 5 minutes.\n\n"
-            "Use /onboarding to begin, or /help to see all commands."
+            "We'll set your context once, then keep you on cadence with the right prompts "
+            "at the right time. You can also dive into frameworks like Annual Review, "
+            "Vivid Vision, and Founding Principles when you need deeper guidance.\n\n"
+            "Use /onboarding to begin (≈5 minutes), or /help to see all commands."
         )
     else:
         if not db_user.onboarding_completed:
@@ -89,7 +92,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 "/goals - View and set goals\n"
                 "/interviews - Self-interview exercises\n"
                 "/patterns - View your patterns\n"
-                "/frameworks - Learn about frameworks\n"
+                "/frameworks - Explore Annual Review, Vivid Vision, Eisenhower Matrix, and other core frameworks\n"
                 "/settings - Update preferences\n"
                 "/help - See all commands"
             )
@@ -119,8 +122,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 /memory - See pattern summary
 
 *Learning*
-/frameworks - Learn about the frameworks
-/principles - Review operating principles
+/frameworks - Explore Annual Review, Vivid Vision, Eisenhower Matrix, and other core frameworks with when-to-use guidance
+/principles - Review the operating principles this system is built on (decision rules, focus, and cadence standards)
 
 *Settings & Data*
 /settings - Update timezone and reminders
