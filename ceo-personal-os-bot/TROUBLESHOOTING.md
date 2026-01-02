@@ -54,7 +54,7 @@ In Railway Settings, add:
 1. Go to **Variables** tab
 2. Add:
    - Variable: `TELEGRAM_BOT_TOKEN`
-   - Value: `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+   - Value: your bot token from @BotFather (no spaces or quotes)
 
 #### Error: Database-related errors
 
@@ -119,7 +119,7 @@ railway login
 railway init
 
 # Set environment variable
-railway variables set TELEGRAM_BOT_TOKEN=8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8
+railway variables set TELEGRAM_BOT_TOKEN=<your_bot_token>
 
 # Deploy
 railway up
@@ -143,7 +143,7 @@ If Railway continues to fail, **Render.com** is another good option:
 8. **Start Command:** `python bot.py`
 9. Add environment variable:
    - Key: `TELEGRAM_BOT_TOKEN`
-   - Value: `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+   - Value: your bot token from @BotFather
 10. Click **"Create Background Worker"**
 
 Render's free tier works great for this bot.
