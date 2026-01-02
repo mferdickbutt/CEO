@@ -207,8 +207,10 @@ async def frameworks_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(
         "🧠 *Framework Library*\n\n"
-        "These are proven frameworks adapted for CEO-level thinking:\n\n"
-        "Select a framework to learn more:",
+        "These proven frameworks sit on top of your North Star, Principles, and Memory files."
+        " They give you the exact prompts used in the text system so you can run the same"
+        " deep work inside Telegram when you don't have the repo open.\n\n"
+        "Select a framework to see: when to use it, the outcome you get, and the steps to run it.",
         reply_markup=reply_markup,
         parse_mode='Markdown'
     )
@@ -221,57 +223,73 @@ async def framework_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
     frameworks = {
         'fw_annual': {
             'name': 'Annual Review (Dr. Anthony Gustin)',
-            'description': 'A structured year-end reflection process that surfaces patterns, '
-                          'celebrates wins, acknowledges failures honestly, and sets clear intent for the future.',
-            'key_elements': [
-                'Data collection from the past year',
-                'Positive reflection (what went well)',
-                'Negative reflection (what didn\'t work)',
-                'Pattern recognition (positive and negative)',
-                'Category-based life review',
-                'Regret minimization framework',
-                'Stop/Start/Continue decisions'
+            'description': 'A half-day, data-backed retrospective that turns the past year into'
+                          ' patterns, decisions, and a forward-looking plan.',
+            'when_to_use': 'Late December or early January — block 3-4 uninterrupted hours',
+            'outcome': [
+                'A full scan of wins, failures, and peak/trough experiences',
+                'Named positive + negative patterns captured in memory.md',
+                'Category ratings across health, relationships, work, finances, meaning, fun',
+                'Stop/Start/Continue list and a guiding word for the year',
+                'Refreshed Life Map, Vivid Vision, and updated 1/3/10-year goals'
             ],
-            'when_to_use': 'Late December or early January, 3-4 uninterrupted hours'
+            'how_to_run': [
+                'Collect data from calendar, finances, photos, notes, travel, and health',
+                'List what went well and peak experiences (aim for 20+ wins)',
+                'List what went poorly and trough experiences with honest specifics',
+                'Extract positive/negative patterns and record them in memory.md',
+                'Rate each life category 1-10 and note imbalances',
+                'Decide what to Stop/Start/Continue and choose a word of the year'
+            ]
         },
         'fw_vivid': {
             'name': 'Vivid Vision (Tony Robbins / Cameron Herold)',
-            'description': 'A detailed, sensory-rich description of your ideal future written in present tense, '
-                          'making the future feel real so your brain starts solving for it.',
-            'key_elements': [
-                'Written in present tense, first person',
-                '3-year time horizon',
-                'Sensory details (what you see, hear, feel)',
-                'Covers work, relationships, health, lifestyle',
-                'Specific enough to feel real'
+            'description': 'A 3-year, present-tense narrative that makes the future vivid enough'
+                          ' that your brain starts building the path.',
+            'when_to_use': 'Annual review season, major transitions, or any time you feel stuck',
+            'outcome': [
+                'A sensory-rich story of your life 3 years from now across 3-6 domains',
+                'Clear signals for what to say yes/no to as decisions show up',
+                'A weekly touchpoint you can read to stay oriented'
             ],
-            'when_to_use': 'Annual review time, major life transitions, or when feeling stuck'
+            'how_to_run': [
+                'Pick a 3-year date and choose 3-6 domains (work, health, relationships, finances, lifestyle, impact, fun)',
+                'Write in first person, present tense with sensory detail',
+                'Describe typical days, how you feel, what you have built, and what you no longer do',
+                'Review weekly and adjust as your vision evolves'
+            ]
         },
         'fw_costing': {
             'name': 'Ideal Lifestyle Costing (Tim Ferriss)',
-            'description': 'Calculate what your ideal lifestyle actually costs, so you know what "enough" is '
-                          'and can make decisions based on life design, not just growth.',
-            'key_elements': [
-                'Define ideal lifestyle 6-12 months out',
-                'Cost every category honestly',
-                'Calculate Target Monthly Income (TMI)',
-                'Compare to current reality',
-                'Design backwards from the life you want'
+            'description': 'A 6-12 month lifestyle design exercise that reveals what "enough" really costs so your business decisions match your life goals.',
+            'when_to_use': 'During annual planning or before big calls (raise, sell, change roles)',
+            'outcome': [
+                'Clear picture of your ideal near-term lifestyle instead of vague “someday” goals',
+                'A monthly + annual cost table with a 20% buffer',
+                'A Target Monthly Income number to anchor decisions'
             ],
-            'when_to_use': 'Annual review, before major decisions (raise capital, sell company, take a job)'
+            'how_to_run': [
+                'Describe your ideal day-to-day 6-12 months out across work, home, relationships, health, travel, learning, fun',
+                'Cost each category honestly (housing, food, transport, health, travel, learning, entertainment, savings, giving)',
+                'Add 20% buffer, annualize it, then back into your Target Monthly Income',
+                'Compare to current reality and decide what to change now'
+            ]
         },
         'fw_lifemap': {
             'name': 'Life Map (Alex Lieberman)',
-            'description': 'Evaluate life across six dimensions to spot imbalances before they become crises. '
-                          'CEOs often over-index on work and under-index on everything else.',
-            'key_elements': [
-                'Six dimensions: Career, Relationships, Health, Meaning, Finances, Fun',
-                'Rate each 1-10 currently',
-                'Identify danger zones (1-4) and thriving areas (8-10)',
-                'Set dimension-specific goals',
-                'Track quarterly to catch drift'
+            'description': 'A six-dimension dashboard that catches imbalance early so you don\'t wake up with a great company and an empty life.',
+            'when_to_use': 'Quarterly reviews or anytime you feel lopsided between work and everything else',
+            'outcome': [
+                'Ratings across Career, Relationships, Health, Meaning, Finances, and Fun (total out of 60)',
+                'Danger-zone, underdeveloped, and thriving lists to focus your next 90 days',
+                'One or two dimension-specific goals with weekly actions'
             ],
-            'when_to_use': 'Quarterly reviews, or when feeling out of balance'
+            'how_to_run': [
+                'Rate each dimension 1-10 with a one-sentence why',
+                'Reflect on current state and what a 10/10 looks like for each area',
+                'Mark danger zones (1-4) and thriving areas (8-10) to protect',
+                'Pick 1-2 dimensions to improve, set one measurable goal each, and define weekly actions'
+            ]
         }
     }
 
@@ -279,11 +297,16 @@ async def framework_callback(update: Update, context: ContextTypes.DEFAULT_TYPE)
     if fw:
         text = f"*{fw['name']}*\n\n"
         text += f"_{fw['description']}_\n\n"
-        text += "*Key Elements:*\n"
-        for elem in fw['key_elements']:
+        text += f"*When to Use:*\n{fw['when_to_use']}\n\n"
+        if fw.get('outcome'):
+            text += "*What You Get:*\n"
+            for item in fw['outcome']:
+                text += f"• {item}\n"
+            text += "\n"
+        text += "*How to Run:*\n"
+        for elem in fw['how_to_run']:
             text += f"• {elem}\n"
-        text += f"\n*When to Use:*\n{fw['when_to_use']}\n\n"
-        text += "Use /annual, /quarterly, or /goals to apply these frameworks."
+        text += "\nUse /annual, /quarterly, /goals, or /memory to apply what you learn."
 
         await query.edit_message_text(text, parse_mode='Markdown')
 
