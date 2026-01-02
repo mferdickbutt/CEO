@@ -7,7 +7,7 @@ Get your CEO Personal OS Telegram bot running on Railway in 5 minutes.
 
 ## ✅ What You Need (You Already Have This!)
 
-- ✅ Bot Token: `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+- ✅ Bot Token: your unique token from @BotFather saved securely
 - ✅ GitHub repo: `mferdickbutt/CEO`
 - ✅ Branch: `claude/ceo-personal-os-GoqXy`
 
@@ -47,7 +47,7 @@ Get your CEO Personal OS Telegram bot running on Railway in 5 minutes.
 3. Click **"New Variable"**
 4. Enter:
    - **Variable name:** `TELEGRAM_BOT_TOKEN`
-   - **Value:** `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+   - **Value:** your bot token from @BotFather (no spaces/quotes)
 5. Click **"Add"**
 
 ### Step 5: Deploy! (30 seconds)
@@ -199,13 +199,7 @@ CEOs, and operators who want clarity without complexity.
 
 ## 🔒 Security Note
 
-Your bot token is shown here for convenience. This token:
-- ✅ Only works with your specific Telegram bot
-- ✅ Can only send messages to users who start a conversation with it
-- ✅ Cannot access other Telegram accounts
-- ✅ Can be regenerated anytime via @BotFather if compromised
-
-Keep it private, but it's relatively safe if someone sees it.
+Keep your bot token private. Store it as the `TELEGRAM_BOT_TOKEN` variable in Railway and regenerate it via @BotFather if it is ever exposed.
 
 ---
 

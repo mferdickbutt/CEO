@@ -2,7 +2,7 @@
 
 ## Your Bot is Ready to Deploy!
 
-**Bot Token:** `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+**Bot Token:** Set your Telegram bot token from @BotFather as an environment variable (keep it private).
 
 ---
 
@@ -43,7 +43,7 @@ Your bot is already in the repository at:
    - Click **"New Variable"**
    - Add:
      - **Variable:** `TELEGRAM_BOT_TOKEN`
-     - **Value:** `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+     - **Value:** your unique bot token from @BotFather (no quotes or spaces)
    - Click **Add**
 
 9. Railway will automatically:
@@ -71,7 +71,7 @@ cd ceo-personal-os-bot
 railway init
 
 # Add environment variable
-railway variables set TELEGRAM_BOT_TOKEN=8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8
+railway variables set TELEGRAM_BOT_TOKEN=<your_bot_token>
 
 # Deploy
 railway up
@@ -246,7 +246,7 @@ To keep your data across redeploys:
 
 ## Your Bot Details
 
-- **Token:** `8590281913:AAG6VwGKy6iGj3mrQvksGHevPji8sRlI_L8`
+- **Token:** stored as `TELEGRAM_BOT_TOKEN` in Railway Variables (generate via @BotFather)
 - **Repository:** `mferdickbutt/CEO`
 - **Branch:** `claude/ceo-personal-os-GoqXy`
 - **Directory:** `ceo-personal-os-bot`
